@@ -5,104 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan Serrano | Staff Systems & SRE Leader</title>
     <style>
-        :root { --accent: #2563eb; --dark: #0f172a; --slate: #475569; --light: #f8fafc; --border: #e2e8f0; }
-        body { font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; color: var(--dark); max-width: 900px; margin: 0 auto; padding: 60px 20px; background: #fff; }
-        header { margin-bottom: 50px; }
-        h1 { margin: 0; font-size: 2.5rem; font-weight: 800; letter-spacing: -0.02em; }
-        .contact-bar { margin-top: 12px; font-size: 0.95rem; color: var(--slate); display: flex; gap: 20px; flex-wrap: wrap; }
-        .section { margin-bottom: 50px; }
-        h2 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 25px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
-        .exp-item { margin-bottom: 35px; }
-        .exp-header { display: flex; justify-content: space-between; align-items: baseline; font-weight: 700; font-size: 1.15rem; }
-        .exp-sub { color: var(--slate); font-size: 0.95rem; margin-bottom: 12px; }
-        ul { padding-left: 1.2rem; }
-        li { margin-bottom: 8px; color: #334155; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .card { border: 1px solid var(--border); padding: 20px; border-radius: 12px; transition: transform 0.2s; }
-        .card:hover { transform: translateY(-3px); border-color: var(--accent); }
-        .card h3 { margin: 0 0 10px 0; font-size: 1.05rem; }
-        .tag { background: var(--light); color: var(--accent); padding: 4px 10px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; margin-right: 5px; }
-        .contact-btn { display: inline-block; background: var(--dark); color: #fff; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 10px; }
-        .contact-btn:hover { background: var(--accent); }
+        :root { --primary: #2563eb; --text: #1e293b; --slate: #64748b; --border: #e2e8f0; }
+        body { font-family: 'Inter', -apple-system, sans-serif; line-height: 1.6; color: var(--text); max-width: 900px; margin: 0 auto; padding: 40px 20px; background: #fff; }
+        header { border-bottom: 2px solid var(--text); padding-bottom: 20px; margin-bottom: 40px; display: flex; justify-content: space-between; align-items: flex-end; }
+        .header-content h1 { margin: 0; font-size: 2.5rem; font-weight: 800; text-transform: uppercase; }
+        .contact { color: var(--slate); font-size: 0.95rem; margin-top: 10px; display: flex; gap: 15px; flex-wrap: wrap; }
+        .download-btn { background: var(--primary); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: opacity 0.2s; }
+        .download-btn:hover { opacity: 0.9; }
+        .section { margin-bottom: 40px; }
+        h2 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary); border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-bottom: 20px; }
+        .job { margin-bottom: 30px; }
+        .job-header { display: flex; justify-content: space-between; font-weight: 700; font-size: 1.1rem; flex-wrap: wrap; }
+        .job-sub { color: var(--slate); font-size: 0.95rem; margin-bottom: 10px; font-weight: 500; }
+        .sub-section-title { font-weight: 700; font-size: 1rem; margin: 15px 0 5px 0; color: #334155; text-decoration: underline; }
+        ul { padding-left: 1.2rem; margin-top: 5px; }
+        li { margin-bottom: 8px; }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; background: #f8fafc; padding: 20px; border-radius: 8px; }
+        .skill-item strong { display: block; margin-bottom: 5px; color: var(--primary); font-size: 0.85rem; text-transform: uppercase; }
+        .pub-item { margin-bottom: 8px; font-style: italic; color: #334155; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Juan Serrano</h1>
-    <div class="contact-bar">
-        <span>📍 Los Angeles, CA</span>
-        <span>✉️ juanitoserrano24@gmail.com</span>
-        <span>📱 (650) 943-3947</span>
+    <div class="header-content">
+        <h1>Juan Serrano</h1>
+        <div class="contact">
+            <span>Los Angeles, California [cite: 2, 9]</span>
+            <span>juanitoserrano24@gmail.com [cite: 2]</span>
+            <span>(650) 943-3947 [cite: 2]</span>
+        </div>
     </div>
+    <a href="Juan_Serrano_Resume.pdf" class="download-btn" download>Download PDF</a>
 </header>
 
-<div class="section">
-    <p style="font-size: 1.2rem; color: var(--slate); border-left: 4px solid var(--accent); padding-left: 20px;">
-        Over a decade of experience as a Systems and Site Reliability Engineer[cite: 4]. 
-        Specializing in optimizing backend system scalability, resilience, and efficiency with a track record of 
-        <strong>multi-million dollar annual savings</strong>[cite: 4, 5].
-    </p>
-</div>
+<section class="section">
+    <h2>Summary</h2>
+    <p>Over a decade of experience as Systems and Site Reliability Engineer with specialization in optimizing backend system scalability, resilience, and efficiency[cite: 4]. A proven leader in capacity planning, incident response, and cost optimization, consistently achieving multi-million dollar annual savings[cite: 5]. Dedicated to developing talent, with a track record of mentoring engineers from Intern to Senior levels[cite: 6].</p>
+</section>
 
 <section class="section">
-    <h2>Professional Experience</h2>
-    <div class="exp-item">
-        <div class="exp-header"><span>Systems Engineer</span><span>2023 — Present</span></div>
-        <div class="exp-sub">Snap Inc. | Device Lab Team | Los Angeles, CA [cite: 8, 9]</div>
+    <h2>Experience</h2>
+
+    <div class="job">
+        <div class="job-header"><span>Systems Engineer | Snap Inc.</span><span>May 2023 — Present [cite: 8, 9]</span></div>
+        <div class="job-sub">Device Lab Team | Los Angeles, California [cite: 8, 9]</div>
         <ul>
-            <li>Managed and optimized the automated device testing suite for Android, iOS, and Web platforms[cite: 10, 11].</li>
-            <li>Managed a provisioning service for thousands of on-prem managed macOS and Linux servers[cite: 14].</li>
-            <li>Increased utilization by 60% through virtual device adoption, reducing yearly hardware investments[cite: 15, 16].</li>
+            <li>Managed and optimized the automated device testing suite for physical Android/iOS, virtual platforms, and web[cite: 10, 11].</li>
+            <li>Improved capacity, efficiency, and availability by managing a provisioning service for thousands of on-prem managed macOS and Linux servers[cite: 14].</li>
+            <li>Optimized testing infrastructure by driving adoption of virtual devices, resulting in a 60% increase in utilization and reduced yearly physical hardware investment[cite: 15, 16].</li>
         </ul>
     </div>
 
-    <div class="exp-item">
-        <div class="exp-header"><span>Staff SRE (Team Lead) to SRE I</span><span>2015 — 2023</span></div>
-        <div class="exp-sub">Twitter Inc. | Core Storage and Ads Revenue | San Francisco, CA [cite: 17, 18]</div>
+    <div class="job">
+        <div class="job-header"><span>Staff SRE (Team Lead) to SRE I | Twitter Inc.</span><span>July 2015 — Jan 2023 [cite: 17, 18]</span></div>
+        <div class="job-sub">Core Storage and Ads Revenue Teams | San Francisco, California [cite: 18]</div>
+        
+        <div class="sub-section-title">Strategy, Leadership, and Mentorship</div>
         <ul>
-            <li>Spearheaded cost reduction initiatives achieving <strong>>$23M/year in savings</strong> and reclaiming >780K cores[cite: 29].</li>
-            <li>Led Revenue Peak Traffic Event Planning for Black Friday and Super Bowl with zero incidents[cite: 25].</li>
-            <li>Managed a fleet of ~50,000 servers overseeing alerting, monitoring, and system upgrades[cite: 37].</li>
-            <li>Led the migration of 5PB of cold data from on-prem to Google Cloud Platform[cite: 31].</li>
-            <li>Mentored engineers from Intern to Senior levels across Revenue and Infrastructure teams[cite: 23].</li>
+            <li>Key contributor to team and cross-functional strategy, driving project resourcing and prioritization[cite: 21].</li>
+            <li>Led Revenue Infra's Capacity Planning process and initiatives[cite: 22].</li>
+            <li>Mentored engineers from Interns to Senior levels across Revenue and Infrastructure teams[cite: 23].</li>
+            <li>Led and optimized Incident Response and Management processes[cite: 24].</li>
+            <li>Led Revenue Peak Traffic Event Planning (Black Friday/Super Bowl), achieving the first-ever zero-incident event[cite: 25].</li>
+        </ul>
+
+        <div class="sub-section-title">Cost Reduction and Efficiency</div>
+        <ul>
+            <li>Spearheaded initiatives achieving >$23M/year in savings and reclaiming >780K cores[cite: 28, 29].</li>
+            <li>Collaborated with ML Prediction team to reduce actionable pages by 80% via SLI/SLO definition[cite: 30].</li>
+            <li>Led the migration of 5PB of cold data from on-prem to GCP[cite: 31].</li>
+        </ul>
+
+        <div class="sub-section-title">Infrastructure and Systems Engineering</div>
+        <ul>
+            <li>Developed next-generation Twitter Ad Infrastructure ensuring scalability and reliability[cite: 33].</li>
+            <li>Managed a fleet of ~50K servers overseeing deployments, system upgrades (CentOS, JVM, Kernel), and recovery[cite: 37].</li>
+            <li>Designed and deployed a fully automated staging environment and conducted performance load testing[cite: 35, 36].</li>
+            <li>Led development of Hardware Lifecycle Management automation for efficient failure detection and cluster expansion[cite: 38].</li>
         </ul>
     </div>
 </section>
 
 <section class="section">
-    <h2>Technical Contributions & Publications</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>Infrastructure Engineering</h3>
-            <p style="font-size: 0.9rem;">Designed and deployed fully automated staging environments and hardware lifecycle automation[cite: 36, 38].</p>
-            <span class="tag">Golang</span> <span class="tag">Python</span> <span class="tag">K8s</span>
-        </div>
-        <div class="card">
-            <h3>Selected Publications</h3>
-            <p style="font-size: 0.9rem; line-height: 1.4;">
-                • Building Twitter's ad platform for the future <br>
-                • Sharding and Twitter's ads serving platform <br>
-                • Storing and retrieving millions of impressions/sec 
-            </p>
-        </div>
+    <h2>Publications</h2>
+    <div class="pub-item">Building Twitter's ad platform architecture for the future [cite: 40]</div>
+    <div class="pub-item">Sharding, simplification, and Twitter's ads serving platform [cite: 40]</div>
+    <div class="pub-item">Storing and retrieving millions of ad impressions per second [cite: 40]</div>
+    <div class="pub-item">How we built Twitter's highly reliable ads pacing service [cite: 40]</div>
+</section>
+
+<section class="section">
+    <h2>Skills & Technologies</h2>
+    <div class="skills-grid">
+        <div class="skill-item"><strong>Programming Languages</strong>Golang, Python, Java, Bash, SQL [cite: 43]</div>
+        <div class="skill-item"><strong>Orchestration & Containerization</strong>Kubernetes, Apache Mesos (+ Aurora) [cite: 44]</div>
+        <div class="skill-item"><strong>Cloud Platforms</strong>AWS, GCP (Google Cloud Platform) [cite: 44]</div>
+        <div class="skill-item"><strong>Databases & Storage</strong>MySQL, No-SQL, Cassandra, Kafka, Redis, Hadoop, ZooKeeper [cite: 45]</div>
+        <div class="skill-item"><strong>Monitoring & CI/CD</strong>Jenkins, Git, JIRA, Grafana, PagerDuty, Ansible, Puppet [cite: 46]</div>
+        <div class="skill-item"><strong>Others</strong>Linux, MacOS, IOS, Android, Temporal, Cursor, Xcode [cite: 46, 47]</div>
     </div>
 </section>
 
 <section class="section">
-    <h2>Education & Expertise</h2>
-    <div class="exp-header"><span>B.A.Sc. Honours Computer Engineering</span><span>2015</span></div>
-    <div class="exp-sub">University of Waterloo | Waterloo, ON </div>
-    <div style="margin-top: 15px;">
-        <span class="tag">AWS/GCP</span> <span class="tag">Cassandra</span> <span class="tag">Kafka</span> <span class="tag">Redis</span> 
-        <span class="tag">Terraform</span> <span class="tag">Temporal</span> <span class="tag">Linux</span>
-    </div>
-</section>
-
-<section class="section" style="text-align: center; background: var(--light); padding: 40px; border-radius: 12px;">
-    <h2 style="border: none; padding: 0; text-align: center;">Get in Touch</h2>
-    <p>Interested in discussing systems architecture, scalability, or reliability engineering?</p>
-    <a href="mailto:juanitoserrano24@gmail.com" class="contact-btn">Send an Email</a>
+    <h2>Education</h2>
+    <div class="job-header"><span>Bachelor of Applied Science, Honours Computer Engineering</span><span>2010 — 2015 [cite: 49]</span></div>
+    <div class="job-sub">University of Waterloo | Waterloo, ON | Co-op Program [cite: 49]</div>
 </section>
 
 </body>
