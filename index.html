@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan Serrano | Systems & SRE Leader</title>
     <style>
-        body { font-family: 'Inter', -apple-system, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 40px 20px; background: #f9f9f9; }
+        :root { --primary: #0056b3; --text: #333; --bg: #f9f9f9; --white: #fff; }
+        body { font-family: 'Inter', -apple-system, sans-serif; line-height: 1.6; color: var(--text); max-width: 900px; margin: 0 auto; padding: 40px 20px; background: var(--bg); }
         header { border-bottom: 2px solid #000; padding-bottom: 20px; margin-bottom: 40px; }
         h1 { margin: 0; font-size: 2.5em; text-transform: uppercase; letter-spacing: 1px; }
-        .contact { color: #666; font-size: 0.9em; }
-        .section { margin-bottom: 40px; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        h2 { border-left: 4px solid #0056b3; padding-left: 15px; color: #0056b3; text-transform: uppercase; font-size: 1.2em; }
+        .contact { color: #666; font-size: 0.9em; margin-top: 10px; }
+        .section { margin-bottom: 30px; background: var(--white); padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        h2 { border-left: 4px solid var(--primary); padding-left: 15px; color: var(--primary); text-transform: uppercase; font-size: 1.1em; margin-top: 0; }
         .job { margin-bottom: 25px; }
-        .job-title { font-weight: bold; font-size: 1.1em; display: flex; justify-content: space-between; }
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
-        .badge { background: #eef2f7; padding: 5px 10px; border-radius: 4px; font-size: 0.85em; margin: 2px; display: inline-block; }
+        .job-header { display: flex; justify-content: space-between; font-weight: bold; font-size: 1.1em; flex-wrap: wrap; }
+        .job-meta { color: #666; font-size: 0.9em; margin-bottom: 10px; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        .skills-container { display: flex; flex-wrap: wrap; gap: 8px; }
+        .badge { background: #eef2f7; padding: 5px 12px; border-radius: 4px; font-size: 0.85em; font-weight: 500; }
+        .pub-item { margin-bottom: 10px; font-style: italic; }
     </style>
 </head>
 <body>
@@ -27,44 +32,63 @@
 </header>
 
 <section class="section">
-    <h2>Professional Summary</h2>
-    <p>Over a decade of experience as a <strong>Systems and Site Reliability Engineer</strong> specializing in optimizing backend scalability, resilience, and efficiency. Proven leader in cost optimization, achieving <strong>multi-million dollar annual savings</strong>.</p>
+    <h2>Summary</h2>
+    <p>Over a decade of experience as a Systems and Site Reliability Engineer[cite: 4]. Specializing in optimizing backend system scalability, resilience, and efficiency[cite: 4]. Proven leader in capacity planning, incident response, and cost optimization, consistently achieving multi-million dollar annual savings[cite: 5].</p>
 </section>
 
 <section class="section">
     <h2>Experience</h2>
+    
     <div class="job">
-        <div class="job-title">
-            <span>Systems Engineer | Snap Inc. (Device Lab Team)</span>
-            <span>2023 – Present</span>
+        <div class="job-header">
+            <span>Systems Engineer | Snap Inc.</span>
+            <span>May 2023 – Present</span>
         </div>
+        <div class="job-meta">Device Lab Team | Los Angeles, CA</div>
         <ul>
-            <li>Managed automated device testing supporting Android, iOS, and Web platforms.</li>
-            <li>Improved capacity and efficiency via provisioning services for thousands of on-prem macOS/Linux servers.</li>
-            <li>Reduced hardware costs by driving a 60% increase in virtual device utilization.</li>
+            <li>Managed and optimized the automated device testing suite supporting Android, iOS, virtual devices, and web platforms[cite: 10, 11].</li>
+            <li>Improved capacity and availability by managing a provisioning service for thousands of on-prem macOS and Linux servers[cite: 14].</li>
+            <li>Optimized testing infrastructure through virtual device adoption, resulting in a 60% increase in utilization[cite: 15, 16].</li>
         </ul>
     </div>
 
     <div class="job">
-        <div class="job-title">
-            <span>Staff SRE (Team Lead) | Twitter Inc.</span>
-            <span>2015 – 2023</span>
+        <div class="job-header">
+            <span>Staff SRE (Team Lead) to SRE I | Twitter Inc.</span>
+            <span>July 2015 – Jan 2023</span>
         </div>
+        <div class="job-meta">Core Storage and Ads Revenue Teams | San Francisco, CA</div>
         <ul>
-            <li>Spearheaded efficiency initiatives saving <strong>$23M/year</strong> and reclaiming 780K+ cores.</li>
-            <li>Led Revenue Peak Traffic Planning for Black Friday and Super Bowl with zero-incident outcomes.</li>
-            <li>Managed a fleet of ~50K servers and migrated 5PB of data to GCP.</li>
+            <li><strong>Strategy & Leadership:</strong> Led Revenue Infra's Capacity Planning and mentored engineers from Intern to Senior levels[cite: 22, 23].</li>
+            <li><strong>Efficiency:</strong> Spearheaded cost reduction initiatives achieving <strong>>$23M/year in savings</strong> and reclaiming >780K cores[cite: 29].</li>
+            <li><strong>Reliability:</strong> Led Revenue Peak Traffic Planning (Black Friday/Super Bowl), achieving the first-ever zero-incident event[cite: 25].</li>
+            <li><strong>Infrastructure:</strong> Managed a fleet of ~50K servers and led the migration of 5PB of cold data to GCP[cite: 31, 37].</li>
         </ul>
     </div>
 </section>
 
 <section class="section">
-    <h2>Technical Skills</h2>
-    <div class="skills-grid">
-        <div><strong>Languages:</strong><br>Golang, Python, Java, Bash, SQL</div>
-        <div><strong>Cloud/Orchestration:</strong><br>K8s, AWS, GCP, Mesos</div>
-        <div><strong>Storage:</strong><br>MySQL, Cassandra, Kafka, Redis</div>
+    <h2>Publications</h2>
+    <div class="pub-item">"Building Twitter's ad platform architecture for the future" [cite: 40]</div>
+    <div class="pub-item">"Sharding, simplification, and Twitter's ads serving platform" [cite: 40]</div>
+    <div class="pub-item">"Storing and retrieving millions of ad impressions per second" [cite: 40]</div>
+    <div class="pub-item">"How we built Twitter's highly reliable ads pacing service" [cite: 40]</div>
+</section>
+
+<section class="section">
+    <h2>Skills & Technologies</h2>
+    <div class="skills-container">
+        <span class="badge">Golang</span> <span class="badge">Python</span> <span class="badge">Java</span> <span class="badge">Bash</span>
+        <span class="badge">Kubernetes</span> <span class="badge">AWS</span> <span class="badge">GCP</span> <span class="badge">Terraform</span>
+        <span class="badge">Cassandra</span> <span class="badge">Kafka</span> <span class="badge">Redis</span> <span class="badge">Hadoop</span>
+        <span class="badge">Jenkins</span> <span class="badge">Ansible</span> <span class="badge">Puppet</span> <span class="badge">Linux</span>
     </div>
+</section>
+
+<section class="section">
+    <h2>Education</h2>
+    <p><strong>Bachelor of Applied Science, Honours Computer Engineering</strong><br>
+    University of Waterloo, Waterloo, ON | April 2015 </p>
 </section>
 
 </body>
